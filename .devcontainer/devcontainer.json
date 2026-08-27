@@ -1,0 +1,20 @@
+{
+	"name": "Angular 22",
+	"dockerFile": "Dockerfile",
+	"context": ".",
+	"workspaceFolder": "/angular-22",
+	"mounts": [
+		"source=angular_node_modules,target=/angular-22/node_modules,type=volume",
+		"source=${localWorkspaceFolder},target=/angular-22,type=bind"
+	],
+	"postCreateCommand": "npm install",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"johnpapa.angular-essentials",
+				"infinity1207.angular2-switcher",
+				"formulahendry.auto-close-tag"
+			]
+		}
+	}
+}
